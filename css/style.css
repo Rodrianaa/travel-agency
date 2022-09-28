@@ -1,0 +1,471 @@
+@font-face {
+    font-family: "Nothing-you-could-do";
+    src: url(../fonts/Nothing\ You\ Could\ Do.eot);
+    src: url(../fonts/Nothing\ You\ Could\ Do.ttf);
+    src: url(../fonts/Nothing\ You\ Could\ Do.woff);
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik.eot);
+    src: url(../fonts/Rubik.ttf);
+    src: url(../fonts/Rubik.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:hover {
+    color: #FF4A52;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+li:hover {
+    color: #FF4A52;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.w-100 {
+    width: 100%!important;
+}
+
+.w-50 {
+    width: 50%!important;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.font-15 {
+    font-size: 15px!important;
+}
+
+header {
+    background-color: #ffffff;
+    justify-content: space-around;
+    padding: 25px 0;
+    position: relative;
+}
+
+.menu-item {
+    border-bottom: 1px solid black;
+    margin-right: 35px;
+    font-size: 1.3em;
+    margin-top: 13px;
+}
+
+.header-menu{
+    display: none;
+}
+
+.search-icon {
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon a {
+    color: black;
+}
+
+.header-menu-burger a {
+    color: black;
+}
+
+.slider{
+    background: url(../images/banner2.png) no-repeat;
+    height: 50vw;      
+    background-size: cover;
+    /* position: relative; */
+}
+
+.slider-text{
+    justify-content: space-around;
+    height: 45vw;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-text h3{
+    font-size: 8vw;
+    font-family: "Nothing-you-could-do", cursive;
+    font-weight: 400;
+    color: white;
+    line-height: 10vw;
+}
+
+.slider-text p{
+    font-size: 2.5vw;
+    font-weight: 400;
+    color: white;
+}
+
+.slider-btn{
+    background-color: #1ec6b6;
+    color: white;
+    font-family: "Rubik";
+    font-size: 1.7vw;
+    outline:0;
+    border-radius: 5px;
+    padding:1vw 1.5vw;
+    transition: color 0.3s;
+}
+
+.slider-btn:hover{
+    background-color: #FF4A52;
+    color: white;
+}
+
+.search-bar{
+    background-color: #040e27;
+    flex-direction: column;
+    padding: 20px 25px;
+    align-items: center;
+    
+}
+
+.search-form{
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #363E52;
+    border-radius: 5px;
+    margin: 10px 10px;
+    padding:15px 50px;
+    color: white;
+    outline: 0;
+}
+
+.search-btn{
+    background-color: #FF4A52;
+    color: white;
+    padding: 17px 39px;
+    font-family: "Rubik" sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: #1ec6b6;
+    color: white;
+}
+
+.search-bar h3{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.popular-heading{
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+    text-align: center;
+    /* safe kuchik mkne text dg center nist bara in ba text-align mshkhs mknim az kja shur bshe text ke baz vast bashe
+    nokte: align-items hich vght kare text-align nemikne kamln ghazie ha joda ast */
+}
+
+.popular-title{
+    font-size: 30px;
+    font-weight: 400;
+    color: #040E27;
+    margin:10px;
+}
+
+.popular-description{
+    font-size: 16px;
+    color: #7A838B;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.popular-container{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article img{
+    margin-bottom: 20px;
+    height: 280px;
+}
+
+.popular-container article{
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform .3s;
+}
+
+.popular-container article:hover{
+    transform: translateY(-10px);
+}
+
+.popular-container article::before{
+    position: absolute;
+    /* vghti az absolute estfde mknim byad jaygah ro begim az kja shru beshe vgrna hich etfghi nemifte */
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(4,14,39,0) 0%, rgba(4,14,39,0.7)100% );
+    content: "";
+    /* content khalie byad htman width va height bedi ke neshun bede */
+    width: 100%;
+    height: 92.4%;
+    z-index: 10000;
+    border-radius: 5px;
+}
+
+.popular-image-info{
+    position:absolute;
+    left:30px;
+    bottom:50px;
+    z-index: 100000;
+}
+
+.popular-image-info p{
+    font-size: 22px;
+    color:#fff;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.popular-image-info a{
+    background-color:#1ec6b6;
+    font-size: 12px;
+    border-radius: 30px;
+    font-weight: 400;
+    padding: 7px 12px;
+    color: #fff;
+    margin: 10px;
+}
+
+/* nokte jadidddddd */
+.popular-container article:hover .popular-image-info p{
+    color: #FF4A52;
+    transition: 0.2;
+}
+
+.popular-container article:hover .popular-image-info a{
+    color: #fff;
+    background-color: #FF4A52;
+    transition: 0.2;
+}
+
+.newsletter{
+    background-image: url(../images/newsletter.png);
+    background-position: 65% 65%;
+    background-size: cover;
+    height: 250px;
+    position: relative;
+}
+
+.newsletter-container{
+    flex-direction: column;
+    align-items: center;
+    z-index: 10000;
+}
+
+.newsletter-text{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.newsletter::before{
+    position: absolute;
+    content: '';
+    background-color: #040E27;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.newsletter-text h4{
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.newsletter-text p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #AAB1B7;
+}
+
+.mail-form{
+    flex-direction: column;
+}
+
+.mail-form input{
+    width: 40vw;
+    height: 50px;
+    background-color:#fff;
+    border-radius: 5px;
+    border: none;
+    color: #AAB1B7;
+    padding-left:15px;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.newsletter-btn{
+    background-color: #FF4A52;
+    color: #fff;
+    padding: 16px 10px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.video{
+    background: url(../images/video.png) no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    padding: 130px 0;
+    margin: 15px 0;
+    width: 100%;
+    position: relative;
+}
+
+.video::before{
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color:#040E27 ;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .2;
+}
+
+.video-container{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* chera az realtive chon ye chiz khonsa ast */
+    z-index: 100;
+}
+
+.video-container h3{
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-size: 7vw;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.video-button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #1ec6b6;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.video-button i{
+    color: #fff;
+}
+
+.video-button:hover{
+    background: #FF4A52;
+}
+
+footer{
+    background-color: #040E27;
+    padding: 60px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.left-footer{
+    margin-bottom:20px;
+}
+
+.footer-info li{
+    color: #AAB1B7;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.footer-title{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Rubik" sans-serif;
+}
+
+.links li{
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.links li a{
+    color: #AAB1B7;
+    font-weight: 400;
+    font-family: "Rubik" sans-serif;
+}
+
+
+
+.show {
+    display: inline-block!important;
+}
+
+/* .show li{
+    border-bottom:1px solid white
+} */
